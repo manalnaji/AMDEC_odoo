@@ -57,4 +57,12 @@
         sequence="8"
         parent="configuration"
     />
+
+    <menuitem
+        id="configuration_configuration"
+        name="Configuration"
+        action="amdec_config_settings_action"
+        sequence="1"
+        parent="configuration"
+    />
 </odoo>

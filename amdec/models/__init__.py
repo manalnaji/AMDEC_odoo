@@ -9,4 +9,5 @@ from . import (
     amdec_panne_type,
     amdec_reparation_type,
     amdec_system,
+    res_config_settings,
 )

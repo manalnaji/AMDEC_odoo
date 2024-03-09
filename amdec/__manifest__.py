@@ -15,6 +15,7 @@
         "views/amdec_system.xml",
         "views/amdec_panne_type.xml",
         "views/amdec_reparation_type.xml",
+        "views/res_config_settings.xml",
         "views/menu.xml",
     ],
     "installable": True,
