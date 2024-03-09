@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+amdec_action_historique_access_user_types_/_internal_user,amdec_action_historique Access User types / Internal User,model_amdec_action_historique,base.group_user,1,1,1,1
+amdec_amdec_access_user_types_/_internal_user,amdec_amdec Access User types / Internal User,model_amdec_amdec,base.group_user,1,1,1,1
+amdec_composante_access_user_types_/_internal_user,amdec_composante Access User types / Internal User,model_amdec_composante,base.group_user,1,1,1,1
+amdec_group_access_user_types_/_internal_user,amdec_group Access User types / Internal User,model_amdec_group,base.group_user,1,1,1,1
+amdec_line_access_user_types_/_internal_user,amdec_line Access User types / Internal User,model_amdec_line,base.group_user,1,1,1,1
+amdec_system_access_user_types_/_internal_user,amdec_system Access User types / Internal User,model_amdec_system,base.group_user,1,1,1,1
+amdec_type_panne_access_user_types_/_internal_user,amdec_type_panne Access User types / Internal User,model_amdec_type_panne,base.group_user,1,1,1,1

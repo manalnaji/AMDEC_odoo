@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Root menu-->
+
+    <menuitem id="amdec" name="Amdec" sequence="20" web_icon="amdec,static/description/icon.png" />
+
+    <!--Sub menu-->
+
+    <menuitem id="menu" name="Menu" sequence="1" parent="amdec" />
+
+    <!--Child menu-->
+
+    <menuitem
+        id="action_historique"
+        name="Action historique"
+        action="amdec_action_historique_action_historique_action_window"
+        sequence="1"
+        parent="menu"
+    />
+
+    <menuitem id="amdec" name="Amdec" action="amdec_amdec_amdec_action_window" sequence="2" parent="menu" />
+
+    <menuitem
+        id="composante"
+        name="Composante"
+        action="amdec_composante_composante_action_window"
+        sequence="3"
+        parent="menu"
+    />
+
+    <menuitem id="group" name="Group" action="amdec_group_group_action_window" sequence="4" parent="menu" />
+
+    <menuitem id="line" name="Line" action="amdec_line_line_action_window" sequence="5" parent="menu" />
+
+    <menuitem id="system" name="System" action="amdec_system_system_action_window" sequence="6" parent="menu" />
+
+    <menuitem
+        id="type_panne"
+        name="Type panne"
+        action="amdec_type_panne_type_panne_action_window"
+        sequence="7"
+        parent="menu"
+    />
+</odoo>

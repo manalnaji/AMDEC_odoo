@@ -1,0 +1,20 @@
+{
+    "name": "Amdec",
+    "version": "12.0.1.0",
+    "author": "TechnoLibre",
+    "license": "AGPL-3",
+    "website": "https://technolibre.ca",
+    "application": True,
+    "data": [
+        "security/ir.model.access.csv",
+        "views/amdec_action_historique.xml",
+        "views/amdec_amdec.xml",
+        "views/amdec_composante.xml",
+        "views/amdec_group.xml",
+        "views/amdec_line.xml",
+        "views/amdec_system.xml",
+        "views/amdec_type_panne.xml",
+        "views/menu.xml",
+    ],
+    "installable": True,
+}
