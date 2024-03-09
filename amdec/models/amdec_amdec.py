@@ -1,6 +1,9 @@
+import logging
 import random
 
 from odoo import _, api, fields, models
+
+_logger = logging.getLogger(__name__)
 
 
 class AmdecAmdec(models.Model):
@@ -29,7 +32,7 @@ class AmdecAmdec(models.Model):
     @api.multi
     def action_execute_algo_1(self):
         self.ensure_one()
-        print("Execute algo 1")
+        _logger.error("Execute algo 1")
         # Exemple
         for amdec_line in self.amdec_line_ids:
             amdec_line.rate = random.random()
@@ -39,7 +42,7 @@ class AmdecAmdec(models.Model):
     @api.multi
     def action_execute_algo_2(self):
         self.ensure_one()
-        print("Execute algo 2")
+        _logger.error("Execute algo 2")
 
     # @api.multi
     # @api.returns('self', lambda value: value.id)
