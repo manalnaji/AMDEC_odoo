@@ -7,11 +7,14 @@ class AmdecActionHistorique(models.Model):
 
     name = fields.Char()
 
-    action_corrige_panne = fields.Boolean()
+    action_corrige_panne = fields.Boolean(string="L'action a corrigé la panne")
 
-    action_realise = fields.Boolean()
+    action_realise = fields.Boolean(string="L'action a été réalisé")
 
-    action_reparation = fields.Char()
+    action_reparation = fields.Many2one(
+        comodel_name="amdec.reparation.type",
+        string="Type réparation",
+    )
 
     composante_id = fields.Many2one(
         comodel_name="amdec.composante",
@@ -20,10 +23,10 @@ class AmdecActionHistorique(models.Model):
 
     system_id = fields.Many2one(
         comodel_name="amdec.system",
-        string="System",
+        string="Système",
     )
 
     type_panne_id = fields.Many2one(
-        comodel_name="amdec.type_panne",
-        string="Type Panne",
+        comodel_name="amdec.panne.type",
+        string="Type panne",
     )

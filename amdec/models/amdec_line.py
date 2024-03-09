@@ -20,7 +20,7 @@ class AmdecLine(models.Model):
     color = fields.Char()
 
     failure_mode_id = fields.Many2one(
-        comodel_name="amdec.type_panne",
+        comodel_name="amdec.panne.type",
         string="Failure Mode",
     )
 

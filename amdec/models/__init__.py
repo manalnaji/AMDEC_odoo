@@ -6,6 +6,7 @@ from . import (
     amdec_composante,
     amdec_group,
     amdec_line,
+    amdec_panne_type,
+    amdec_reparation_type,
     amdec_system,
-    amdec_type_panne,
 )

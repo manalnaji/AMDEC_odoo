@@ -5,4 +5,5 @@ amdec_composante_access_user_types_/_internal_user,amdec_composante Access User 
 amdec_group_access_user_types_/_internal_user,amdec_group Access User types / Internal User,model_amdec_group,base.group_user,1,1,1,1
 amdec_line_access_user_types_/_internal_user,amdec_line Access User types / Internal User,model_amdec_line,base.group_user,1,1,1,1
 amdec_system_access_user_types_/_internal_user,amdec_system Access User types / Internal User,model_amdec_system,base.group_user,1,1,1,1
-amdec_type_panne_access_user_types_/_internal_user,amdec_type_panne Access User types / Internal User,model_amdec_type_panne,base.group_user,1,1,1,1
+amdec_panne_type_access_user_types_/_internal_user,amdec_panne_type Access User types / Internal User,model_amdec_panne_type,base.group_user,1,1,1,1
+amdec_reparation_type_access_user_types_/_internal_user,amdec_reparation_type Access User types / Internal User,model_amdec_reparation_type,base.group_user,1,1,1,1

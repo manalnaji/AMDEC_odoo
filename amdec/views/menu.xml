@@ -16,7 +16,7 @@
         id="action_historique"
         name="Action historique"
         action="amdec_action_historique_action_historique_action_window"
-        sequence="3"
+        sequence="5"
         parent="menu"
     />
 
@@ -26,7 +26,7 @@
         id="composante"
         name="Composante"
         action="amdec_composante_composante_action_window"
-        sequence="3"
+        sequence="4"
         parent="menu"
     />
 
@@ -43,10 +43,18 @@
     />
 
     <menuitem
-        id="type_panne"
+        id="panne_type"
         name="Type panne"
-        action="amdec_type_panne_type_panne_action_window"
+        action="amdec_panne_type_panne_type_action_window"
         sequence="7"
+        parent="configuration"
+    />
+
+    <menuitem
+        id="reparation_type"
+        name="Type reparation"
+        action="amdec_reparation_type_reparation_type_action_window"
+        sequence="8"
         parent="configuration"
     />
 </odoo>
