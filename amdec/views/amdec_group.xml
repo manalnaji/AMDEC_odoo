@@ -15,6 +15,9 @@
                     <group>
                         <field name="severity" />
                     </group>
+                    <group>
+                        <field name="amdec_line_ids" />
+                    </group>
                 </sheet>
             </form>
         </field>

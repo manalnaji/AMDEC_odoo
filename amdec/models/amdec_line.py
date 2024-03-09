@@ -8,12 +8,12 @@ class AmdecLine(models.Model):
     name = fields.Char()
 
     amdec_group_id = fields.Many2one(
-        comodel_name="_unknown",
+        comodel_name="amdec.group",
         string="Amdec Group",
     )
 
     amdec_id = fields.Many2one(
-        comodel_name="_unknown",
+        comodel_name="amdec.amdec",
         string="Amdec",
     )
 

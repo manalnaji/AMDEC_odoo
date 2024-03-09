@@ -7,4 +7,19 @@ class AmdecAmdec(models.Model):
 
     name = fields.Char()
 
-    amdec_precedent_id = fields.Integer(string="Amdec Precedent")
+    amdec_precedent_id = fields.Many2one(
+        comodel_name="amdec.amdec",
+        string="AMDEC précédent",
+    )
+
+    amdec_group_ids = fields.One2many(
+        comodel_name="amdec.group",
+        inverse_name="amdec_id",
+        string="Groups",
+    )
+
+    amdec_line_ids = fields.One2many(
+        comodel_name="amdec.line",
+        inverse_name="amdec_id",
+        string="Lines",
+    )

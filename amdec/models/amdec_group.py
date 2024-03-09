@@ -8,8 +8,14 @@ class AmdecGroup(models.Model):
     name = fields.Char()
 
     amdec_id = fields.Many2one(
-        comodel_name="_unknown",
+        comodel_name="amdec.amdec",
         string="Amdec",
     )
 
     severity = fields.Integer()
+
+    amdec_line_ids = fields.One2many(
+        comodel_name="amdec.line",
+        inverse_name="amdec_group_id",
+        string="Lines",
+    )
