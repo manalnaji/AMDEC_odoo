@@ -5,6 +5,10 @@
         <field name="model">amdec.amdec</field>
         <field name="arch" type="xml">
             <form string="Titre">
+                <header>
+                    <button name="action_execute_algo_1" string="Execute algo 1" type="object" class="oe_highlight" />
+                    <button name="action_execute_algo_2" string="Execute algo 2" type="object" class="oe_highlight" />
+                </header>
                 <sheet>
                     <group>
                         <field name="name" />

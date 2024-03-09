@@ -17,8 +17,6 @@ class AmdecLine(models.Model):
         string="Amdec",
     )
 
-    color = fields.Char()
-
     failure_mode_id = fields.Many2one(
         comodel_name="amdec.panne.type",
         string="Failure Mode",
@@ -29,11 +27,29 @@ class AmdecLine(models.Model):
         string="Historique Action",
     )
 
-    is_seuil_superior = fields.Boolean()
+    is_seuil_superior = fields.Boolean(
+        # store=True, compute="_compute_is_seuil_superior"
+    )
 
-    rate = fields.Float()
+    rate = fields.Float(
+        help=(
+            "Combien de fois la composante apparait dans les actions"
+            " historiques."
+        ),
+        # compute="_compute_rate",
+        # store=True,
+    )
 
     system_id = fields.Many2one(
         comodel_name="amdec.system",
         string="System",
     )
+
+    # @api.depends("rate")
+    # def _compute_is_seuil_superior(self):
+    #     for rec in self:
+    #         rec.is_seuil_superior = rec.rate > 0.5
+    #
+    # # @api.depends("res_model", "res_id")
+    # def _compute_rate(self):
+    #     pass

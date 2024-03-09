@@ -16,9 +16,6 @@
                         <field name="amdec_id" />
                     </group>
                     <group>
-                        <field name="color" />
-                    </group>
-                    <group>
                         <field name="failure_mode_id" />
                     </group>
                     <group>
@@ -46,7 +43,6 @@
                 <field name="name" type="row" />
                 <field name="amdec_group_id" type="row" />
                 <field name="amdec_id" type="row" />
-                <field name="color" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
                 <field name="rate" type="measure" />
@@ -63,7 +59,6 @@
                 <field name="name" />
                 <field name="amdec_group_id" />
                 <field name="amdec_id" />
-                <field name="color" />
                 <field name="failure_mode_id" />
                 <field name="historique_action_ids" />
                 <field name="is_seuil_superior" />
@@ -87,11 +82,6 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="amdec_id" />
-                                        </strong>
-                                    </li>
-                                    <li class="mb4">
-                                        <strong>
-                                            <field name="color" />
                                         </strong>
                                     </li>
                                     <li class="mb4">
@@ -137,7 +127,6 @@
                 <field name="name" type="row" />
                 <field name="amdec_group_id" type="row" />
                 <field name="amdec_id" type="row" />
-                <field name="color" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
                 <field name="rate" type="measure" />
@@ -154,7 +143,6 @@
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('amdec_group_id','!=',False)]" name="amdec_group_id" string="Amdec Group" />
                 <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="Amdec" />
-                <filter domain="[('color','!=',False)]" name="color" string="Color" />
                 <filter domain="[('failure_mode_id','!=',False)]" name="failure_mode_id" string="Failure Mode" />
                 <filter
                     domain="[('historique_action_ids','!=',False)]"
@@ -172,11 +160,10 @@
         <field name="name">amdec_line_tree</field>
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree decoration-danger="is_seuil_superior">
                 <field name="name" />
                 <field name="amdec_group_id" />
                 <field name="amdec_id" />
-                <field name="color" />
                 <field name="failure_mode_id" />
                 <field name="historique_action_ids" />
                 <field name="is_seuil_superior" />

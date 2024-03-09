@@ -7,8 +7,6 @@ class AmdecComposante(models.Model):
 
     name = fields.Char()
 
-    color = fields.Char()
-
     is_seuil_superior = fields.Boolean()
 
     seuil = fields.Float()

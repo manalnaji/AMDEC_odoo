@@ -10,9 +10,6 @@
                         <field name="name" />
                     </group>
                     <group>
-                        <field name="color" />
-                    </group>
-                    <group>
                         <field name="is_seuil_superior" />
                     </group>
                     <group>
@@ -32,7 +29,6 @@
         <field name="arch" type="xml">
             <graph string="Amdec composante">
                 <field name="name" type="row" />
-                <field name="color" type="row" />
                 <field name="is_seuil_superior" type="row" />
                 <field name="seuil" type="measure" />
                 <field name="valeur" type="measure" />
@@ -46,7 +42,6 @@
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile">
                 <field name="name" />
-                <field name="color" />
                 <field name="is_seuil_superior" />
                 <field name="seuil" />
                 <field name="valeur" />
@@ -58,11 +53,6 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="name" />
-                                        </strong>
-                                    </li>
-                                    <li class="mb4">
-                                        <strong>
-                                            <field name="color" />
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.is_seuil_superior.raw_value">
@@ -96,7 +86,6 @@
         <field name="arch" type="xml">
             <pivot string="Amdec composante">
                 <field name="name" type="row" />
-                <field name="color" type="row" />
                 <field name="is_seuil_superior" type="row" />
                 <field name="seuil" type="measure" />
                 <field name="valeur" type="measure" />
@@ -110,7 +99,6 @@
         <field name="arch" type="xml">
             <search string="Amdec composante">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
-                <filter domain="[('color','!=',False)]" name="color" string="Color" />
                 <filter domain="[('is_seuil_superior','=',True)]" name="is_seuil_superior" string="Is Seuil Superior" />
                 <filter domain="[('seuil','!=',False)]" name="seuil" string="Seuil" />
                 <filter domain="[('valeur','!=',False)]" name="valeur" string="Valeur" />
@@ -122,9 +110,8 @@
         <field name="name">amdec_composante_tree</field>
         <field name="model">amdec.composante</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree decoration-danger="is_seuil_superior">
                 <field name="name" />
-                <field name="color" />
                 <field name="is_seuil_superior" />
                 <field name="seuil" />
                 <field name="valeur" />
