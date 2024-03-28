@@ -18,7 +18,8 @@ class AmdecAmdec(models.Model):
     )
 
     amdec_project_id = fields.Many2one(
-        comodel_name="amdec.project", string="Project"
+        comodel_name="amdec.project",
+        string="Project",
     )
 
     amdec_line_ids = fields.One2many(

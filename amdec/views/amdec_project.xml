@@ -7,6 +7,24 @@
             <form string="Titre">
                 <sheet>
                     <group>
+                        <field name="amdec_ids" />
+                    </group>
+                    <group>
+                        <field name="general_amdec_seuil_rpn" />
+                    </group>
+                    <group>
+                        <field name="grille_detectabilite_ids" />
+                    </group>
+                    <group>
+                        <field name="grille_occurence_ids" />
+                    </group>
+                    <group>
+                        <field name="grille_severite_ids" />
+                    </group>
+                    <group>
+                        <field name="period_ids" />
+                    </group>
+                    <group>
                         <field name="name" />
                     </group>
                 </sheet>
@@ -20,6 +38,7 @@
         <field name="arch" type="xml">
             <graph string="Amdec project">
                 <field name="name" type="row" />
+                <field name="general_amdec_seuil_rpn" type="measure" />
             </graph>
         </field>
     </record>
@@ -30,6 +49,12 @@
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile">
                 <field name="name" />
+                <field name="general_amdec_seuil_rpn" />
+                <field name="grille_detectabilite_ids" />
+                <field name="grille_occurence_ids" />
+                <field name="grille_severite_ids" />
+                <field name="period_ids" />
+                <field name="amdec_ids" />
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
@@ -38,6 +63,36 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="name" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="general_amdec_seuil_rpn" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="grille_detectabilite_ids" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="grille_occurence_ids" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="grille_severite_ids" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="period_ids" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="amdec_ids" />
                                         </strong>
                                     </li>
                                 </ul>
@@ -55,6 +110,7 @@
         <field name="arch" type="xml">
             <pivot string="Amdec project">
                 <field name="name" type="row" />
+                <field name="general_amdec_seuil_rpn" type="measure" />
             </pivot>
         </field>
     </record>
@@ -65,6 +121,28 @@
         <field name="arch" type="xml">
             <search string="Amdec project">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
+                <filter
+                    domain="[('general_amdec_seuil_rpn','!=',False)]"
+                    name="general_amdec_seuil_rpn"
+                    string="General Amdec Seuil Rpn"
+                />
+                <filter
+                    domain="[('grille_detectabilite_ids','!=',False)]"
+                    name="grille_detectabilite_ids"
+                    string="Grilles d&#233;tectabilite"
+                />
+                <filter
+                    domain="[('grille_occurence_ids','!=',False)]"
+                    name="grille_occurence_ids"
+                    string="Grilles occurence"
+                />
+                <filter
+                    domain="[('grille_severite_ids','!=',False)]"
+                    name="grille_severite_ids"
+                    string="Grilles S&#233;v&#233;rit&#233;"
+                />
+                <filter domain="[('period_ids','!=',False)]" name="period_ids" string="P&#233;riodes" />
+                <filter domain="[('amdec_ids','!=',False)]" name="amdec_ids" string="AMDEC" />
             </search>
         </field>
     </record>
@@ -74,6 +152,12 @@
         <field name="model">amdec.project</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="amdec_ids" />
+                <field name="general_amdec_seuil_rpn" />
+                <field name="grille_detectabilite_ids" />
+                <field name="grille_occurence_ids" />
+                <field name="grille_severite_ids" />
+                <field name="period_ids" />
                 <field name="name" />
             </tree>
         </field>

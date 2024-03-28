@@ -11,6 +11,9 @@
                 </header>
                 <sheet>
                     <group>
+                        <field name="amdec_project_id" />
+                    </group>
+                    <group>
                         <field name="name" />
                     </group>
                     <group>
@@ -30,7 +33,8 @@
         <field name="arch" type="xml">
             <graph string="Amdec amdec">
                 <field name="name" type="row" />
-                <field name="amdec_precedent_id" type="measure" />
+                <field name="amdec_precedent_id" type="row" />
+                <field name="amdec_project_id" type="row" />
             </graph>
         </field>
     </record>
@@ -42,6 +46,8 @@
             <kanban class="o_kanban_mobile">
                 <field name="name" />
                 <field name="amdec_precedent_id" />
+                <field name="amdec_project_id" />
+                <field name="amdec_line_ids" />
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
@@ -55,6 +61,16 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="amdec_precedent_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="amdec_project_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="amdec_line_ids" />
                                         </strong>
                                     </li>
                                 </ul>
@@ -72,7 +88,8 @@
         <field name="arch" type="xml">
             <pivot string="Amdec amdec">
                 <field name="name" type="row" />
-                <field name="amdec_precedent_id" type="measure" />
+                <field name="amdec_precedent_id" type="row" />
+                <field name="amdec_project_id" type="row" />
             </pivot>
         </field>
     </record>
@@ -86,8 +103,10 @@
                 <filter
                     domain="[('amdec_precedent_id','!=',False)]"
                     name="amdec_precedent_id"
-                    string="Amdec Precedent"
+                    string="AMDEC pr&#233;c&#233;dent"
                 />
+                <filter domain="[('amdec_project_id','!=',False)]" name="amdec_project_id" string="Project" />
+                <filter domain="[('amdec_line_ids','!=',False)]" name="amdec_line_ids" string="Lines" />
             </search>
         </field>
     </record>
@@ -97,6 +116,8 @@
         <field name="model">amdec.amdec</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="amdec_line_ids" />
+                <field name="amdec_project_id" />
                 <field name="name" />
                 <field name="amdec_precedent_id" />
             </tree>

@@ -12,6 +12,9 @@
                         </button>
                     </div>
                     <group>
+                        <field name="period_id" />
+                    </group>
+                    <group>
                         <field name="name" />
                     </group>
                     <group>
@@ -36,6 +39,7 @@
                 <field name="name" type="row" />
                 <field name="max_value" type="measure" />
                 <field name="min_value" type="measure" />
+                <field name="period_id" type="row" />
                 <field name="sequence" type="measure" />
             </graph>
         </field>
@@ -49,6 +53,7 @@
                 <field name="name" />
                 <field name="max_value" />
                 <field name="min_value" />
+                <field name="period_id" />
                 <field name="sequence" />
                 <templates>
                     <t t-name="kanban-box">
@@ -68,6 +73,11 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="min_value" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="period_id" />
                                         </strong>
                                     </li>
                                     <li class="mb4">
@@ -92,6 +102,7 @@
                 <field name="name" type="row" />
                 <field name="max_value" type="measure" />
                 <field name="min_value" type="measure" />
+                <field name="period_id" type="row" />
                 <field name="sequence" type="measure" />
             </pivot>
         </field>
@@ -106,6 +117,7 @@
                 <filter domain="[('active','=',False)]" name="Inactive" string="Inactive Amdec grille occurence" />
                 <filter domain="[('max_value','!=',False)]" name="max_value" string="Max Value" />
                 <filter domain="[('min_value','!=',False)]" name="min_value" string="Min Value" />
+                <filter domain="[('period_id','!=',False)]" name="period_id" string="P&#233;riode" />
                 <filter domain="[('sequence','!=',False)]" name="sequence" string="Sequence" />
             </search>
         </field>
@@ -116,6 +128,7 @@
         <field name="model">amdec.grille.occurence</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="period_id" />
                 <field name="name" />
                 <field name="max_value" />
                 <field name="min_value" />

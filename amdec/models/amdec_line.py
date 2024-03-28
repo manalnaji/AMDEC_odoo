@@ -31,10 +31,12 @@ class AmdecLine(models.Model):
 
     cause = fields.Text()
 
-    is_seuil_superior = fields.Boolean(store=True, compute="_compute_rpn")
 
     general_amdec_seuil_rpn = fields.Integer(
         related="amdec_id.amdec_project_id.general_amdec_seuil_rpn"
+    is_seuil_superior = fields.Boolean(
+        compute="_compute_rpn",
+        store=True,
     )
 
     inspection_ids = fields.Many2many(
@@ -43,25 +45,33 @@ class AmdecLine(models.Model):
     )
 
     occurence = fields.Integer(
+        compute="_compute_occurence",
+        store=True,
         help=(
             "Calcul du nombre de fréquence sur l'ensemble des inspections par"
             " période de temps en appliquant la grille des seuils d'occurences"
             " dynamiques."
         ),
-        compute="_compute_occurence",
-        store=True,
     )
 
     detectabilite_id = fields.Many2one(
-        comodel_name="amdec.grille.detectabilite"
+        comodel_name="amdec.grille.detectabilite",
+        string="Detectabilite",
     )
 
-    severite_id = fields.Many2one(comodel_name="amdec.grille.severite")
+    severite_id = fields.Many2one(
+        comodel_name="amdec.grille.severite",
+        string="Severite",
+    )
 
-    rpn = fields.Integer(store=True, compute="_compute_rpn")
+    rpn = fields.Integer(
+        compute="_compute_rpn",
+        store=True,
+    )
 
     composante_id = fields.Many2one(
-        comodel_name="amdec.composante", string="Composante"
+        comodel_name="amdec.composante",
+        string="Composante",
     )
 
     system_id = fields.Many2one(

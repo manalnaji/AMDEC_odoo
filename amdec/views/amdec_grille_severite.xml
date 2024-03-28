@@ -12,6 +12,9 @@
                         </button>
                     </div>
                     <group>
+                        <field name="period_id" />
+                    </group>
+                    <group>
                         <field name="name" />
                     </group>
                     <group>
@@ -31,6 +34,7 @@
         <field name="arch" type="xml">
             <graph string="Amdec grille severite">
                 <field name="name" type="row" />
+                <field name="period_id" type="row" />
                 <field name="sequence" type="measure" />
                 <field name="value" type="measure" />
             </graph>
@@ -43,6 +47,7 @@
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile">
                 <field name="name" />
+                <field name="period_id" />
                 <field name="sequence" />
                 <field name="value" />
                 <templates>
@@ -53,6 +58,11 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="name" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="period_id" />
                                         </strong>
                                     </li>
                                     <li class="mb4">
@@ -80,6 +90,7 @@
         <field name="arch" type="xml">
             <pivot string="Amdec grille severite">
                 <field name="name" type="row" />
+                <field name="period_id" type="row" />
                 <field name="sequence" type="measure" />
                 <field name="value" type="measure" />
             </pivot>
@@ -93,6 +104,7 @@
             <search string="Amdec grille severite">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('active','=',False)]" name="Inactive" string="Inactive Amdec grille severite" />
+                <filter domain="[('period_id','!=',False)]" name="period_id" string="P&#233;riode" />
                 <filter domain="[('sequence','!=',False)]" name="sequence" string="Sequence" />
                 <filter domain="[('value','!=',False)]" name="value" string="Value" />
             </search>
@@ -104,6 +116,7 @@
         <field name="model">amdec.grille.severite</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="period_id" />
                 <field name="name" />
                 <field name="sequence" />
                 <field name="value" />

@@ -7,6 +7,36 @@
             <form string="Titre">
                 <sheet>
                     <group>
+                        <field name="cause" />
+                    </group>
+                    <group>
+                        <field name="composante_id" />
+                    </group>
+                    <group>
+                        <field name="defaillance_id" />
+                    </group>
+                    <group>
+                        <field name="detectabilite_id" />
+                    </group>
+                    <group>
+                        <field name="effet" />
+                    </group>
+                    <group>
+                        <field name="general_amdec_seuil_rpn" />
+                    </group>
+                    <group>
+                        <field name="inspection_ids" />
+                    </group>
+                    <group>
+                        <field name="occurence" />
+                    </group>
+                    <group>
+                        <field name="rpn" />
+                    </group>
+                    <group>
+                        <field name="severite_id" />
+                    </group>
+                    <group>
                         <field name="name" />
                     </group>
                     <group>
@@ -36,8 +66,17 @@
             <graph string="Amdec line">
                 <field name="name" type="row" />
                 <field name="amdec_id" type="row" />
+                <field name="cause" type="row" />
+                <field name="composante_id" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="detectabilite_id" type="row" />
+                <field name="effet" type="row" />
                 <field name="failure_mode_id" type="row" />
+                <field name="general_amdec_seuil_rpn" type="measure" />
                 <field name="is_seuil_superior" type="row" />
+                <field name="occurence" type="measure" />
+                <field name="rpn" type="measure" />
+                <field name="severite_id" type="row" />
                 <field name="system_id" type="row" />
             </graph>
         </field>
@@ -50,9 +89,19 @@
             <kanban class="o_kanban_mobile">
                 <field name="name" />
                 <field name="amdec_id" />
+                <field name="cause" />
+                <field name="composante_id" />
+                <field name="defaillance_id" />
+                <field name="detectabilite_id" />
+                <field name="effet" />
                 <field name="failure_mode_id" />
+                <field name="general_amdec_seuil_rpn" />
                 <field name="historique_action_ids" />
+                <field name="inspection_ids" />
                 <field name="is_seuil_superior" />
+                <field name="occurence" />
+                <field name="rpn" />
+                <field name="severite_id" />
                 <field name="system_id" />
                 <templates>
                     <t t-name="kanban-box">
@@ -71,7 +120,37 @@
                                     </li>
                                     <li class="mb4">
                                         <strong>
+                                            <field name="cause" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="composante_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="defaillance_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="detectabilite_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="effet" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
                                             <field name="failure_mode_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="general_amdec_seuil_rpn" />
                                         </strong>
                                     </li>
                                     <li class="mb4">
@@ -79,11 +158,31 @@
                                             <field name="historique_action_ids" />
                                         </strong>
                                     </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="inspection_ids" />
+                                        </strong>
+                                    </li>
                                     <li class="text-success float-right mb4" t-if="record.is_seuil_superior.raw_value">
                                         <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.is_seuil_superior.raw_value">
                                         <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="occurence" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="rpn" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="severite_id" />
+                                        </strong>
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -106,8 +205,17 @@
             <pivot string="Amdec line">
                 <field name="name" type="row" />
                 <field name="amdec_id" type="row" />
+                <field name="cause" type="row" />
+                <field name="composante_id" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="detectabilite_id" type="row" />
+                <field name="effet" type="row" />
                 <field name="failure_mode_id" type="row" />
+                <field name="general_amdec_seuil_rpn" type="measure" />
                 <field name="is_seuil_superior" type="row" />
+                <field name="occurence" type="measure" />
+                <field name="rpn" type="measure" />
+                <field name="severite_id" type="row" />
                 <field name="system_id" type="row" />
             </pivot>
         </field>
@@ -120,13 +228,27 @@
             <search string="Amdec line">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="Amdec" />
+                <filter domain="[('cause','!=',False)]" name="cause" string="Cause" />
+                <filter domain="[('composante_id','!=',False)]" name="composante_id" string="Composante" />
+                <filter domain="[('defaillance_id','!=',False)]" name="defaillance_id" string="D&#233;faillance" />
+                <filter domain="[('detectabilite_id','!=',False)]" name="detectabilite_id" string="Detectabilite" />
+                <filter domain="[('effet','!=',False)]" name="effet" string="Effet" />
                 <filter domain="[('failure_mode_id','!=',False)]" name="failure_mode_id" string="Failure Mode" />
+                <filter
+                    domain="[('general_amdec_seuil_rpn','!=',False)]"
+                    name="general_amdec_seuil_rpn"
+                    string="General Amdec Seuil Rpn"
+                />
                 <filter
                     domain="[('historique_action_ids','!=',False)]"
                     name="historique_action_ids"
                     string="Historique Action"
                 />
+                <filter domain="[('inspection_ids','!=',False)]" name="inspection_ids" string="Inspections" />
                 <filter domain="[('is_seuil_superior','=',True)]" name="is_seuil_superior" string="Is Seuil Superior" />
+                <filter domain="[('occurence','!=',False)]" name="occurence" string="Occurence" />
+                <filter domain="[('rpn','!=',False)]" name="rpn" string="Rpn" />
+                <filter domain="[('severite_id','!=',False)]" name="severite_id" string="Severite" />
                 <filter domain="[('system_id','!=',False)]" name="system_id" string="System" />
             </search>
         </field>
@@ -137,6 +259,16 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <tree decoration-danger="is_seuil_superior">
+                <field name="cause" />
+                <field name="composante_id" />
+                <field name="defaillance_id" />
+                <field name="detectabilite_id" />
+                <field name="effet" />
+                <field name="general_amdec_seuil_rpn" />
+                <field name="inspection_ids" />
+                <field name="occurence" />
+                <field name="rpn" />
+                <field name="severite_id" />
                 <field name="name" />
                 <field name="amdec_id" />
                 <field name="failure_mode_id" />

@@ -7,7 +7,10 @@ class AmdecComposante(models.Model):
 
     name = fields.Char()
 
-    system_id = fields.Many2one(comodel_name="amdec.system", string="Système")
+    system_id = fields.Many2one(
+        comodel_name="amdec.system",
+        string="Système",
+    )
 
     amdec_line_ids = fields.One2many(
         comodel_name="amdec.line",
