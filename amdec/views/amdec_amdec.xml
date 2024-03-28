@@ -17,9 +17,6 @@
                         <field name="amdec_precedent_id" />
                     </group>
                     <group>
-                        <field name="amdec_group_ids" />
-                    </group>
-                    <group>
                         <field name="amdec_line_ids" />
                     </group>
                 </sheet>

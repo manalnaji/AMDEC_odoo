@@ -17,12 +17,6 @@ class AmdecAmdec(models.Model):
         string="AMDEC précédent",
     )
 
-    amdec_group_ids = fields.One2many(
-        comodel_name="amdec.group",
-        inverse_name="amdec_id",
-        string="Groups",
-    )
-
     amdec_line_ids = fields.One2many(
         comodel_name="amdec.line",
         inverse_name="amdec_id",

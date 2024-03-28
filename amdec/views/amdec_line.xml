@@ -10,9 +10,6 @@
                         <field name="name" />
                     </group>
                     <group>
-                        <field name="amdec_group_id" />
-                    </group>
-                    <group>
                         <field name="amdec_id" />
                     </group>
                     <group>
@@ -41,7 +38,6 @@
         <field name="arch" type="xml">
             <graph string="Amdec line">
                 <field name="name" type="row" />
-                <field name="amdec_group_id" type="row" />
                 <field name="amdec_id" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
@@ -57,7 +53,6 @@
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile">
                 <field name="name" />
-                <field name="amdec_group_id" />
                 <field name="amdec_id" />
                 <field name="failure_mode_id" />
                 <field name="historique_action_ids" />
@@ -72,11 +67,6 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="name" />
-                                        </strong>
-                                    </li>
-                                    <li class="mb4">
-                                        <strong>
-                                            <field name="amdec_group_id" />
                                         </strong>
                                     </li>
                                     <li class="mb4">
@@ -125,7 +115,6 @@
         <field name="arch" type="xml">
             <pivot string="Amdec line">
                 <field name="name" type="row" />
-                <field name="amdec_group_id" type="row" />
                 <field name="amdec_id" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
@@ -141,7 +130,6 @@
         <field name="arch" type="xml">
             <search string="Amdec line">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
-                <filter domain="[('amdec_group_id','!=',False)]" name="amdec_group_id" string="Amdec Group" />
                 <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="Amdec" />
                 <filter domain="[('failure_mode_id','!=',False)]" name="failure_mode_id" string="Failure Mode" />
                 <filter
@@ -162,7 +150,6 @@
         <field name="arch" type="xml">
             <tree decoration-danger="is_seuil_superior">
                 <field name="name" />
-                <field name="amdec_group_id" />
                 <field name="amdec_id" />
                 <field name="failure_mode_id" />
                 <field name="historique_action_ids" />
