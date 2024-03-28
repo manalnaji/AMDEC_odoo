@@ -30,8 +30,6 @@
         parent="menu"
     />
 
-    <menuitem id="group" name="Group" action="amdec_group_group_action_window" sequence="3" parent="menu" />
-
     <menuitem id="line" name="Line" action="amdec_line_line_action_window" sequence="2" parent="menu" />
 
     <menuitem

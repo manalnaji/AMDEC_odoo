@@ -10,7 +10,6 @@
         "views/amdec_action_historique.xml",
         "views/amdec_amdec.xml",
         "views/amdec_composante.xml",
-        "views/amdec_group.xml",
         "views/amdec_line.xml",
         "views/amdec_system.xml",
         "views/amdec_panne_type.xml",
