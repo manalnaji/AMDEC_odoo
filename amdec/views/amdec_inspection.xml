@@ -117,6 +117,24 @@
                     name="responsable_action_id"
                     string="Responsable"
                 />
+
+                <field name="name" />
+                <field name="date_action" />
+                <field name="frequence" />
+                <filter name="active" string="Active" domain="[('active','=',True)]" help="Show active" />
+                <filter name="inactive" string="Inactive" domain="[('active','=',False)]" help="Show inactive" />
+                <group string="Group By" expand="1">
+                    <filter
+                        name="group_by_defaillance_id"
+                        string="Defaillance"
+                        context="{'group_by':'defaillance_id'}"
+                    />
+                    <filter
+                        name="group_by_responsable_action_id"
+                        string="Responsable"
+                        context="{'group_by':'responsable_action_id'}"
+                    />
+                </group>
             </search>
         </field>
     </record>
@@ -126,9 +144,9 @@
         <field name="model">amdec.inspection</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="name" />
                 <field name="defaillance_id" />
                 <field name="responsable_action_id" />
-                <field name="name" />
                 <field name="date_action" />
                 <field name="frequence" />
             </tree>
