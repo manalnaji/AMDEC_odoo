@@ -8,6 +8,8 @@
                 <sheet>
                     <group>
                         <field name="name" />
+                        <field name="cause" />
+                        <field name="effet" />
                     </group>
                 </sheet>
             </form>
@@ -75,6 +77,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="cause" />
+                <field name="effet" />
             </tree>
         </field>
     </record>
@@ -83,6 +87,6 @@
         id="amdec_defaillance_defaillance_action_window"
         name="Defaillance"
         res_model="amdec.defaillance"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

@@ -128,6 +128,6 @@
         id="amdec_grille_detectabilite_grille_detectabilite_action_window"
         name="Grille detectabilite"
         res_model="amdec.grille.detectabilite"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

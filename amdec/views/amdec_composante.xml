@@ -7,14 +7,16 @@
             <form string="Titre">
                 <sheet>
                     <group>
-                        <field name="amdec_line_ids" />
-                    </group>
-                    <group>
+                        <field name="name" />
                         <field name="system_id" />
                     </group>
-                    <group>
-                        <field name="name" />
-                    </group>
+                    <notebook>
+                        <page string="Lines">
+                            <group>
+                                <field name="amdec_line_ids" />
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -96,9 +98,9 @@
         <field name="model">amdec.composante</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="amdec_line_ids" />
-                <field name="system_id" />
                 <field name="name" />
+                <field name="system_id" />
+                <field name="amdec_line_ids" />
             </tree>
         </field>
     </record>
@@ -107,6 +109,6 @@
         id="amdec_composante_composante_action_window"
         name="Composante"
         res_model="amdec.composante"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

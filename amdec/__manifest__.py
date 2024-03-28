@@ -9,7 +9,11 @@
     "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",
+        "data/amdec_composante.xml",
+        "data/amdec_defaillance.xml",
         "data/amdec_period.xml",
+        "data/amdec_project.xml",
+        "data/amdec_system.xml",
         "views/amdec_action_historique.xml",
         "views/amdec_amdec.xml",
         "views/amdec_composante.xml",

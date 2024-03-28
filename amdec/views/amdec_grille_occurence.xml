@@ -141,6 +141,6 @@
         id="amdec_grille_occurence_grille_occurence_action_window"
         name="Grille occurence"
         res_model="amdec.grille.occurence"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

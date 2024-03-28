@@ -6,3 +6,7 @@ class AmdecDefaillance(models.Model):
     _description = "amdec_defaillance"
 
     name = fields.Char()
+
+    cause = fields.Text()
+
+    effet = fields.Text()

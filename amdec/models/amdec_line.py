@@ -27,9 +27,9 @@ class AmdecLine(models.Model):
         string="Historique Action",
     )
 
-    effet = fields.Text()
+    effet = fields.Text(related="defaillance_id.effet")
 
-    cause = fields.Text()
+    cause = fields.Text(related="defaillance_id.cause")
 
     general_amdec_seuil_rpn = fields.Integer(
         related="amdec_id.amdec_project_id.general_amdec_seuil_rpn"

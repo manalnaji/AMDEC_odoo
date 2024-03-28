@@ -167,6 +167,6 @@
         id="amdec_project_project_action_window"
         name="Project"
         res_model="amdec.project"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

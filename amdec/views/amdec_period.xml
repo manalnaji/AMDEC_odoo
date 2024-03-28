@@ -109,6 +109,6 @@
         id="amdec_period_period_action_window"
         name="Period"
         res_model="amdec.period"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

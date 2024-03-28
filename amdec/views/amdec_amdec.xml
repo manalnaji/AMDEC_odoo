@@ -128,6 +128,6 @@
         id="amdec_amdec_amdec_action_window"
         name="Amdec"
         res_model="amdec.amdec"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

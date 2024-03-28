@@ -283,6 +283,6 @@
         id="amdec_line_line_action_window"
         name="Line"
         res_model="amdec.line"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>
