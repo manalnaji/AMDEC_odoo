@@ -8,52 +8,33 @@
                 <sheet>
                     <group>
                         <field name="cause" />
-                    </group>
-                    <group>
                         <field name="composante_id" />
-                    </group>
-                    <group>
                         <field name="defaillance_id" />
-                    </group>
-                    <group>
                         <field name="detectabilite_id" />
-                    </group>
-                    <group>
                         <field name="effet" />
-                    </group>
-                    <group>
                         <field name="general_amdec_seuil_rpn" />
-                    </group>
-                    <group>
-                        <field name="inspection_ids" />
-                    </group>
-                    <group>
                         <field name="occurence" />
                     </group>
                     <group>
                         <field name="rpn" />
-                    </group>
-                    <group>
                         <field name="severite_id" />
-                    </group>
-                    <group>
-                        <field name="name" />
-                    </group>
-                    <group>
                         <field name="amdec_id" />
-                    </group>
-                    <group>
                         <field name="failure_mode_id" />
-                    </group>
-                    <group>
-                        <field name="historique_action_ids" />
-                    </group>
-                    <group>
                         <field name="is_seuil_superior" />
-                    </group>
-                    <group>
                         <field name="system_id" />
                     </group>
+                    <notebook>
+                        <page string="Actions">
+                            <group>
+                                <field name="historique_action_ids" />
+                            </group>
+                        </page>
+                        <page string="Inspection">
+                            <group>
+                                <field name="inspection_ids" />
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -64,7 +45,6 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <graph string="Amdec line">
-                <field name="name" type="row" />
                 <field name="amdec_id" type="row" />
                 <field name="cause" type="row" />
                 <field name="composante_id" type="row" />
@@ -87,7 +67,6 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile">
-                <field name="name" />
                 <field name="amdec_id" />
                 <field name="cause" />
                 <field name="composante_id" />
@@ -108,11 +87,6 @@
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
-                                    <li class="mb4">
-                                        <strong>
-                                            <field name="name" />
-                                        </strong>
-                                    </li>
                                     <li class="mb4">
                                         <strong>
                                             <field name="amdec_id" />
@@ -203,7 +177,6 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <pivot string="Amdec line">
-                <field name="name" type="row" />
                 <field name="amdec_id" type="row" />
                 <field name="cause" type="row" />
                 <field name="composante_id" type="row" />
@@ -226,7 +199,6 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <search string="Amdec line">
-                <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="Amdec" />
                 <filter domain="[('cause','!=',False)]" name="cause" string="Cause" />
                 <filter domain="[('composante_id','!=',False)]" name="composante_id" string="Composante" />
@@ -259,22 +231,21 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <tree decoration-danger="is_seuil_superior">
-                <field name="cause" />
-                <field name="composante_id" />
-                <field name="defaillance_id" />
-                <field name="detectabilite_id" />
-                <field name="effet" />
-                <field name="general_amdec_seuil_rpn" />
-                <field name="inspection_ids" />
-                <field name="occurence" />
-                <field name="rpn" />
-                <field name="severite_id" />
-                <field name="name" />
-                <field name="amdec_id" />
-                <field name="failure_mode_id" />
-                <field name="historique_action_ids" />
-                <field name="is_seuil_superior" />
                 <field name="system_id" />
+                <field name="composante_id" />
+                <field name="amdec_id" />
+                <field name="cause" />
+                <field name="effet" />
+                <field name="defaillance_id" />
+                <field name="failure_mode_id" />
+                <field name="general_amdec_seuil_rpn" />
+                <field name="occurence" />
+                <field name="detectabilite_id" />
+                <field name="severite_id" />
+                <field name="rpn" />
+                <field name="historique_action_ids" widget="many2many_tags" />
+                <field name="inspection_ids" widget="many2many_tags" />
+                <field name="is_seuil_superior" invisible="True" />
             </tree>
         </field>
     </record>

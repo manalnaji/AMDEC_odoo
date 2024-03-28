@@ -4,8 +4,7 @@ from odoo import _, api, fields, models
 class AmdecLine(models.Model):
     _name = "amdec.line"
     _description = "amdec_line"
-
-    name = fields.Char()
+    _rec_name = "defaillance_id"
 
     amdec_id = fields.Many2one(
         comodel_name="amdec.amdec",

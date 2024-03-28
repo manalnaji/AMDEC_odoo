@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_line_1" model="amdec.line">
+            <field name="amdec_id" ref="amdec.amdec_amdec_1" />
+            <field name="composante_id" ref="amdec.amdec_composante_1" />
+            <field name="defaillance_id" ref="amdec.amdec_defaillance_1" />
+        </record>
+    </data>
+</odoo>
