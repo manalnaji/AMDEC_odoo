@@ -5,6 +5,7 @@
     "license": "AGPL-3",
     "website": "https://technolibre.ca",
     "application": True,
+    "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",
         "views/amdec_action_historique.xml",

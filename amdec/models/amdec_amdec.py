@@ -17,6 +17,10 @@ class AmdecAmdec(models.Model):
         string="AMDEC précédent",
     )
 
+    amdec_project_id = fields.Many2one(
+        comodel_name="amdec.project", string="Project"
+    )
+
     amdec_line_ids = fields.One2many(
         comodel_name="amdec.line",
         inverse_name="amdec_id",

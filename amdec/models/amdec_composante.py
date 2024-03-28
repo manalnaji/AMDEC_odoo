@@ -7,8 +7,16 @@ class AmdecComposante(models.Model):
 
     name = fields.Char()
 
-    is_seuil_superior = fields.Boolean()
+    system_id = fields.Many2one(comodel_name="amdec.system", string="Système")
 
-    seuil = fields.Float()
+    amdec_line_ids = fields.One2many(
+        comodel_name="amdec.line",
+        inverse_name="composante_id",
+        string="Lines",
+    )
 
-    valeur = fields.Float()
+    # is_seuil_superior = fields.Boolean()
+    #
+    # seuil = fields.Float()
+    #
+    # valeur = fields.Float()

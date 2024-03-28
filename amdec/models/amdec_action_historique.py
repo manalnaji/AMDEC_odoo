@@ -28,11 +28,16 @@ class AmdecActionHistorique(models.Model):
     )
 
     system_id = fields.Many2one(
-        comodel_name="amdec.system",
+        related="composante_id.system_id",
         string="Système",
     )
 
     type_panne_id = fields.Many2one(
         comodel_name="amdec.panne.type",
         string="Type panne",
+    )
+
+    defaillance_id = fields.Many2one(
+        comodel_name="amdec.defaillance",
+        string="Défaillance",
     )

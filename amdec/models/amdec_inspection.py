@@ -9,4 +9,13 @@ class AmdecInspection(models.Model):
 
     date_action = fields.Date()
 
-    frequence = fields.Integer()
+    defaillance_id = fields.Many2one(
+        comodel_name="amdec.defaillance",
+        string="Défaillance",
+    )
+
+    responsable_action_id = fields.Many2one(
+        comodel_name="res.partner", string="Responsable"
+    )
+
+    frequence = fields.Integer(help="Par défaut, devrait être 0 ou 1")

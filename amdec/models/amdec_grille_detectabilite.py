@@ -12,3 +12,8 @@ class AmdecGrilleDetectabilite(models.Model):
     sequence = fields.Integer()
 
     value = fields.Integer()
+
+    period_id = fields.Many2one(
+        comodel_name="amdec.period",
+        string="Période",
+    )

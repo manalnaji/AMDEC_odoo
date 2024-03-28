@@ -22,9 +22,6 @@
                         <field name="is_seuil_superior" />
                     </group>
                     <group>
-                        <field name="rate" />
-                    </group>
-                    <group>
                         <field name="system_id" />
                     </group>
                 </sheet>
@@ -41,7 +38,6 @@
                 <field name="amdec_id" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
-                <field name="rate" type="measure" />
                 <field name="system_id" type="row" />
             </graph>
         </field>
@@ -57,7 +53,6 @@
                 <field name="failure_mode_id" />
                 <field name="historique_action_ids" />
                 <field name="is_seuil_superior" />
-                <field name="rate" />
                 <field name="system_id" />
                 <templates>
                     <t t-name="kanban-box">
@@ -92,11 +87,6 @@
                                     </li>
                                     <li class="mb4">
                                         <strong>
-                                            <field name="rate" />
-                                        </strong>
-                                    </li>
-                                    <li class="mb4">
-                                        <strong>
                                             <field name="system_id" />
                                         </strong>
                                     </li>
@@ -118,7 +108,6 @@
                 <field name="amdec_id" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
-                <field name="rate" type="measure" />
                 <field name="system_id" type="row" />
             </pivot>
         </field>
@@ -138,7 +127,6 @@
                     string="Historique Action"
                 />
                 <filter domain="[('is_seuil_superior','=',True)]" name="is_seuil_superior" string="Is Seuil Superior" />
-                <filter domain="[('rate','!=',False)]" name="rate" string="Rate" />
                 <filter domain="[('system_id','!=',False)]" name="system_id" string="System" />
             </search>
         </field>
@@ -154,7 +142,6 @@
                 <field name="failure_mode_id" />
                 <field name="historique_action_ids" />
                 <field name="is_seuil_superior" />
-                <field name="rate" />
                 <field name="system_id" />
             </tree>
         </field>

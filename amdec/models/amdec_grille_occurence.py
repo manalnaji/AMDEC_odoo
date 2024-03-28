@@ -14,3 +14,8 @@ class AmdecGrilleOccurence(models.Model):
     min_value = fields.Integer()
 
     sequence = fields.Integer()
+
+    period_id = fields.Many2one(
+        comodel_name="amdec.period",
+        string="Période",
+    )
