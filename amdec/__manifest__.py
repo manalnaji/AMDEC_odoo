@@ -9,6 +9,7 @@
     "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",
+        "data/amdec_period.xml",
         "views/amdec_action_historique.xml",
         "views/amdec_amdec.xml",
         "views/amdec_composante.xml",
