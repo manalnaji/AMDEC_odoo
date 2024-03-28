@@ -8,18 +8,18 @@
         </record>
         <record id="amdec_period_2023_bi_2" model="amdec.period">
             <field name="name">2023 juillet à décembre</field>
-            <field name="date_debut" eval="datetime.strptime('01/07/2023')" />
-            <field name="date_fin" eval="datetime.strptime('31/12/2023')" />
+            <field name="date_debut" eval="datetime.strptime('01/07/2023', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2023', '%d/%m/%Y')" />
         </record>
         <record id="amdec_period_2024_bi_1" model="amdec.period">
             <field name="name">2024 janvier à juin</field>
-            <field name="date_debut" eval="datetime.strptime('01/01/2024')" />
-            <field name="date_fin" eval="datetime.strptime('30/06/2024')" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2024', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('30/06/2024', '%d/%m/%Y')" />
         </record>
         <record id="amdec_period_2024_bi_2" model="amdec.period">
             <field name="name">2024 juillet à décembre</field>
-            <field name="date_debut" eval="datetime.strptime('01/07/2024')" />
-            <field name="date_fin" eval="datetime.strptime('31/12/2024')" />
+            <field name="date_debut" eval="datetime.strptime('01/07/2024', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2024', '%d/%m/%Y')" />
         </record>
     </data>
 </odoo>
