@@ -7,6 +7,10 @@ class AmdecActionHistorique(models.Model):
 
     name = fields.Char()
 
+    date_action = fields.Datetime()
+
+    responsable_action_id = fields.Many2one(comodel_name="res.partner", string="Responsable")
+
     action_corrige_panne = fields.Boolean(string="L'action a corrigé la panne")
 
     action_realise = fields.Boolean(string="L'action a été réalisé")
