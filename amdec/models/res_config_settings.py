@@ -14,7 +14,7 @@ class ResConfigSettings(models.TransientModel):
     # Database
     # ----------------------------------------------------------
 
-    default_general_amdec_seuil_rpn = fields.Float(
+    default_general_amdec_seuil_rpn = fields.Integer(
         default=DEFAULT_GENERAL_AMDEC_SEUIL_RPN,
         default_model="amdec.project",
         string="Seuil de composante AMDEC par défaut",
@@ -40,7 +40,7 @@ class ResConfigSettings(models.TransientModel):
         res = super(ResConfigSettings, self).get_values()
         params = self.env["ir.config_parameter"].sudo()
         res.update(
-            default_general_amdec_seuil_rpn=float(
+            default_general_amdec_seuil_rpn=int(
                 params.get_param(
                     "amdec.default_general_amdec_seuil_rpn",
                     DEFAULT_GENERAL_AMDEC_SEUIL_RPN,

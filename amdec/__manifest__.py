@@ -15,6 +15,7 @@
         "data/amdec_project.xml",
         "data/amdec_system.xml",
         "data/amdec_inspection.xml",
+        "data/amdec_amdec.xml",
         "views/amdec_action_historique.xml",
         "views/amdec_amdec.xml",
         "views/amdec_composante.xml",
