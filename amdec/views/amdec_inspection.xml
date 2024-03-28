@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="amdec_inspection_view_form" model="ir.ui.view">
+        <field name="name">amdec_inspection_form</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                    <group>
+                        <field name="date_action" />
+                    </group>
+                    <group>
+                        <field name="frequence" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_graph" model="ir.ui.view">
+        <field name="name">amdec_inspection_graph</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <graph string="Amdec inspection">
+                <field name="name" type="row" />
+                <field name="date_action" type="row" />
+                <field name="frequence" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_kanban" model="ir.ui.view">
+        <field name="name">amdec_inspection_kanban</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <field name="date_action" />
+                <field name="frequence" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="name" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="date_action" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="frequence" />
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_pivot" model="ir.ui.view">
+        <field name="name">amdec_inspection_pivot</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <pivot string="Amdec inspection">
+                <field name="name" type="row" />
+                <field name="date_action" type="row" />
+                <field name="frequence" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_search" model="ir.ui.view">
+        <field name="name">amdec_inspection_search</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <search string="Amdec inspection">
+                <filter domain="[('name','!=',False)]" name="name" string="Name" />
+                <filter domain="[('date_action','!=',False)]" name="date_action" string="Date Action" />
+                <filter domain="[('frequence','!=',False)]" name="frequence" string="Frequence" />
+            </search>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_tree" model="ir.ui.view">
+        <field name="name">amdec_inspection_tree</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date_action" />
+                <field name="frequence" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="amdec_inspection_inspection_action_window"
+        name="Inspection"
+        res_model="amdec.inspection"
+        view_mode="kanban,tree,pivot,graph,form"
+    />
+</odoo>

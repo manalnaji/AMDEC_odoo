@@ -9,4 +9,11 @@ from . import (
     amdec_reparation_type,
     amdec_system,
     res_config_settings,
+    amdec_defaillance,
+    amdec_grille_detectabilite,
+    amdec_grille_occurence,
+    amdec_grille_severite,
+    amdec_inspection,
+    amdec_period,
+    amdec_project,
 )

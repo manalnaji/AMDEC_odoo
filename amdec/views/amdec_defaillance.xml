@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="amdec_defaillance_view_form" model="ir.ui.view">
+        <field name="name">amdec_defaillance_form</field>
+        <field name="model">amdec.defaillance</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="amdec_defaillance_view_graph" model="ir.ui.view">
+        <field name="name">amdec_defaillance_graph</field>
+        <field name="model">amdec.defaillance</field>
+        <field name="arch" type="xml">
+            <graph string="Amdec defaillance">
+                <field name="name" type="row" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="amdec_defaillance_view_kanban" model="ir.ui.view">
+        <field name="name">amdec_defaillance_kanban</field>
+        <field name="model">amdec.defaillance</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="name" />
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="amdec_defaillance_view_pivot" model="ir.ui.view">
+        <field name="name">amdec_defaillance_pivot</field>
+        <field name="model">amdec.defaillance</field>
+        <field name="arch" type="xml">
+            <pivot string="Amdec defaillance">
+                <field name="name" type="row" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="amdec_defaillance_view_search" model="ir.ui.view">
+        <field name="name">amdec_defaillance_search</field>
+        <field name="model">amdec.defaillance</field>
+        <field name="arch" type="xml">
+            <search string="Amdec defaillance">
+                <filter domain="[('name','!=',False)]" name="name" string="Name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="amdec_defaillance_view_tree" model="ir.ui.view">
+        <field name="name">amdec_defaillance_tree</field>
+        <field name="model">amdec.defaillance</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="amdec_defaillance_defaillance_action_window"
+        name="Defaillance"
+        res_model="amdec.defaillance"
+        view_mode="kanban,tree,pivot,graph,form"
+    />
+</odoo>
