@@ -6,3 +6,10 @@ amdec_grille_severite_access_user_types_/_internal_user,amdec_grille_severite Ac
 amdec_inspection_access_user_types_/_internal_user,amdec_inspection Access User types / Internal User,model_amdec_inspection,base.group_user,1,1,1,1
 amdec_period_access_user_types_/_internal_user,amdec_period Access User types / Internal User,model_amdec_period,base.group_user,1,1,1,1
 amdec_project_access_user_types_/_internal_user,amdec_project Access User types / Internal User,model_amdec_project,base.group_user,1,1,1,1
+amdec_action_historique_access_user_types_/_internal_user,amdec_action_historique Access User types / Internal User,model_amdec_action_historique,base.group_user,1,1,1,1
+amdec_amdec_access_user_types_/_internal_user,amdec_amdec Access User types / Internal User,model_amdec_amdec,base.group_user,1,1,1,1
+amdec_composante_access_user_types_/_internal_user,amdec_composante Access User types / Internal User,model_amdec_composante,base.group_user,1,1,1,1
+amdec_line_access_user_types_/_internal_user,amdec_line Access User types / Internal User,model_amdec_line,base.group_user,1,1,1,1
+amdec_system_access_user_types_/_internal_user,amdec_system Access User types / Internal User,model_amdec_system,base.group_user,1,1,1,1
+amdec_panne_type_access_user_types_/_internal_user,amdec_panne_type Access User types / Internal User,model_amdec_panne_type,base.group_user,1,1,1,1
+amdec_reparation_type_access_user_types_/_internal_user,amdec_reparation_type Access User types / Internal User,model_amdec_reparation_type,base.group_user,1,1,1,1
