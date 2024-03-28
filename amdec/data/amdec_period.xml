@@ -3,8 +3,8 @@
     <data noupdate="1">
         <record id="amdec_period_2023_bi_1" model="amdec.period">
             <field name="name">2023 janvier à juin</field>
-            <field name="date_debut" eval="datetime.strptime('01/01/2023')" />
-            <field name="date_fin" eval="datetime.strptime('30/06/2023')" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2023', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('30/06/2023', '%d/%m/%Y')" />
         </record>
         <record id="amdec_period_2023_bi_2" model="amdec.period">
             <field name="name">2023 juillet à décembre</field>
