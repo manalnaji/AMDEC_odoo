@@ -70,7 +70,6 @@ class AmdecLine(models.Model):
     )
 
     @api.depends(
-        "rpn",
         "occurence",
         "detectabilite_id",
         "severite_id",
