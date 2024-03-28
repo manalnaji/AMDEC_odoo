@@ -31,9 +31,10 @@ class AmdecLine(models.Model):
 
     cause = fields.Text()
 
-
     general_amdec_seuil_rpn = fields.Integer(
         related="amdec_id.amdec_project_id.general_amdec_seuil_rpn"
+    )
+
     is_seuil_superior = fields.Boolean(
         compute="_compute_rpn",
         store=True,
