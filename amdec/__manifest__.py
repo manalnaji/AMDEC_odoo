@@ -23,6 +23,7 @@
         "views/amdec_project.xml",
         "views/amdec_reparation_type.xml",
         "views/amdec_system.xml",
+        "views/res_config_settings.xml",
         "views/menu.xml",
     ],
     "installable": True,
