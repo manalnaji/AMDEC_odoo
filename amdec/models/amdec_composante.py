@@ -14,9 +14,3 @@ class AmdecComposante(models.Model):
         inverse_name="composante_id",
         string="Lines",
     )
-
-    # is_seuil_superior = fields.Boolean()
-    #
-    # seuil = fields.Float()
-    #
-    # valeur = fields.Float()
